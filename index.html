@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Rangeela Digital Studio - Online Form, Scholarship, Resume, GST, Land Services, Photo Editing, Printing and Digital Services">
+
+<title>Rangeela Digital Studio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+:root{
+    --primary:#6a11cb;
+    --blue:#2575fc;
+    --green:#19b65b;
+    --dark:#151329;
+    --yellow:#ffe600;
+    --gray:#687083;
+    --white:#fff;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:linear-gradient(100deg,var(--primary),var(--blue));
+    box-shadow:0 3px 18px #0003;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:13px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    font-size:22px;
+    font-weight:800;
+}
+
+.logo span{
+    color:var(--yellow);
+}
+
+nav{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:var(--yellow);
+}
+
+.menu{
+    display:none;
+    background:none;
+    border:0;
+    color:white;
+    font-size:28px;
+}
+
+
+/* HERO */
+
+.hero{
+    min-height:610px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:60px 18px;
+
+    background:
+    radial-gradient(circle at 20% 20%,#8b45dc55,transparent 30%),
+    linear-gradient(135deg,#29115f,#145edb);
+}
+
+.hero-inner{
+    max-width:900px;
+}
+
+.badge{
+    display:inline-block;
+    background:#ffffff1c;
+    border:1px solid #ffffff55;
+    padding:8px 15px;
+    border-radius:30px;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.15;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:var(--yellow);
+}
+
+.hero p{
+    font-size:19px;
+    max-width:760px;
+    margin:auto auto 25px;
+    color:#f2f4ff;
+}
+
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    border:0;
+    border-radius:30px;
+    padding:13px 22px;
+    text-decoration:none;
+    font-weight:800;
+    cursor:pointer;
+    margin:5px;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 22px #0003;
+}
+
+.primary{
+    background:var(--yellow);
+    color:#111;
+}
+
+.whatsapp{
+    background:var(--green);
+    color:white;
+}
+
+.blue{
+    background:var(--blue);
+    color:white;
+}
+
+
+/* COMMON */
+
+section{
+    padding:72px 18px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.title h2{
+    font-size:34px;
+}
+
+.title p{
+    color:var(--gray);
+    margin-top:7px;
+}
+
+
+/* SEARCH */
+
+.search{
+    max-width:650px;
+    margin:0 auto 28px;
+}
+
+.search input{
+    width:100%;
+    padding:15px 20px;
+    border:2px solid #e0e4ec;
+    border-radius:30px;
+    font-size:16px;
+    outline:none;
+}
+
+.search input:focus{
+    border-color:var(--primary);
+}
+
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:17px;
+    padding:25px;
+    box-shadow:0 7px 25px #26324a12;
+    transition:.25s;
+    border:1px solid #edf0f5;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 32px #26324a20;
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:8px;
+}
+
+.card h3{
+    color:#4d169d;
+    margin-bottom:7px;
+}
+
+.card p{
+    color:var(--gray);
+    font-size:14px;
+}
+
+.smallbtn{
+    display:inline-block;
+    margin-top:15px;
+    padding:9px 15px;
+    border-radius:22px;
+    background:#eef3ff;
+    color:#225acb;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:13px;
+}
+
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.aboutgrid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:35px;
+    align-items:center;
+}
+
+.about p{
+    color:#566071;
+    margin:10px 0;
+}
+
+.checks{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:18px;
+}
+
+.check{
+    background:#f5f7ff;
+    padding:12px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+
+/* DOCUMENTS */
+
+.docs{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.doc{
+    background:white;
+    padding:20px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0 5px 18px #0000000c;
+}
+
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.photo{
+    height:180px;
+    border-radius:15px;
+
+    background:
+    linear-gradient(135deg,#6a11cb,#2575fc);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+    font-size:25px;
+    font-weight:bold;
+    text-align:center;
+}
+
+
+/* CTA */
+
+.cta{
+    background:linear-gradient(120deg,var(--primary),var(--blue));
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:35px;
+}
+
+
+/* CONTACT */
+
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contactbox{
+    background:white;
+    border-radius:16px;
+    padding:28px;
+    box-shadow:0 7px 25px #0000000d;
+}
+
+.item{
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+}
+
+.form input,
+.form textarea{
+    width:100%;
+    padding:13px;
+    margin:7px 0;
+    border:1px solid #dfe3ea;
+    border-radius:9px;
+    font-size:15px;
+}
+
+.form textarea{
+    height:120px;
+    resize:none;
+}
+
+
+/* NOTICE */
+
+.notice{
+    background:#fff5cc;
+    color:#614c00;
+    padding:13px 18px;
+    border-radius:10px;
+    margin:20px auto;
+    max-width:900px;
+    text-align:center;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#151515;
+    color:white;
+    text-align:center;
+    padding:30px 18px;
+}
+
+footer p{
+    color:#aaa;
+    margin-top:6px;
+}
+
+
+/* FLOATING WHATSAPP */
+
+.float{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#19b65b;
+    color:white;
+
+    text-decoration:none;
+    font-size:27px;
+
+    box-shadow:0 8px 25px #0004;
+
+    z-index:999;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .docs,
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .aboutgrid,
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        gap:10px;
+    }
+}
+
+
+@media(max-width:650px){
+
+    .navbar{
+        flex-wrap:wrap;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        width:100%;
+        padding-top:10px;
+        flex-direction:column;
+    }
+
+    nav.open{
+        display:flex;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .services,
+    .docs,
+    .gallery,
+    .checks{
+        grid-template-columns:1fr;
+    }
+
+    .photo{
+        height:150px;
+    }
+
+    section{
+        padding:52px 14px;
+    }
+
+    .title h2{
+        font-size:28px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+Rangeela <span>Digital Studio</span>
+</div>
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+
+<nav id="nav">
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#documents">Documents</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-inner">
+
+<div class="badge">
+🏪 आपका अपना Digital Service Center
+</div>
+
+<h1>
+Welcome to
+<span>Rangeela Digital Studio</span>
+</h1>
+
+<p>
+Online Form, Scholarship, Resume, GST,
+Land Services, Photo Editing, Printing
+और कई Digital Services — एक ही जगह।
+</p>
+
+<a class="btn primary" href="#services">
+Services देखें
+</a>
+
+<a
+class="btn whatsapp"
+href="https://wa.me/918521739975"
+target="_blank">
+
+💬 WhatsApp करें
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="title">
+
+<h2>हमारी Services</h2>
+
+<p>
+अपनी जरूरत की सेवा खोजें और WhatsApp पर enquiry भेजें।
+</p>
+
+</div>
+
+
+<div class="search">
+
+<input
+id="search"
+oninput="filterServices()"
+placeholder="🔎 Service खोजें..."
+>
+
+</div>
+
+
+<div class="services" id="serviceList">
+
+
+<!-- SERVICE 1 -->
+
+<div
+class="card service"
+data-name="online form government job exam">
+
+<div class="icon">📝</div>
+
+<h3>Online Form</h3>
+
+<p>
+सरकारी नौकरी, परीक्षा और अन्य ऑनलाइन आवेदन भरने में सहायता।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('Online Form')"
+href="#">
+
+Apply / Enquiry
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 2 -->
+
+<div
+class="card service"
+data-name="scholarship छात्रवृत्ति">
+
+<div class="icon">🎓</div>
+
+<h3>Scholarship</h3>
+
+<p>
+Scholarship आवेदन और दस्तावेज संबंधी सहायता।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('Scholarship')"
+href="#">
+
+Apply / Enquiry
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 3 -->
+
+<div
+class="card service"
+data-name="resume cv biodata">
+
+<div class="icon">📄</div>
+
+<h3>Resume / CV / Biodata</h3>
+
+<p>
+Professional Resume, CV और Biodata तैयार किया जाता है।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('Resume / CV / Biodata')"
+href="#">
+
+Enquiry
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 4 -->
+
+<div
+class="card service"
+data-name="gst registration">
+
+<div class="icon">💼</div>
+
+<h3>GST Online</h3>
+
+<p>
+GST Registration एवं संबंधित ऑनलाइन सेवाओं में सहायता।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('GST Online')"
+href="#">
+
+Enquiry
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 5 -->
+
+<div
+class="card service"
+data-name="land khatiyan jamabandi survey receipt mutation">
+
+<div class="icon">🏠</div>
+
+<h3>Land Services</h3>
+
+<p>
+Survey Form, Khatiyan, Jamabandi, Receipt और Land Name Transfer आदि।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('Land Services')"
+href="#">
+
+Enquiry
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 6 -->
+
+<div
+class="card service"
+data-name="ration card name correction">
+
+<div class="icon">🪪</div>
+
+<h3>Ration Card</h3>
+
+<p>
+नाम जोड़ना, नाम सुधार और नया राशन कार्ड संबंधी सहायता।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('Ration Card')"
+href="#">
+
+Enquiry
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 7 -->
+
+<div
+class="card service"
+data-name="photo passport hd editing">
+
+<div class="icon">📸</div>
+
+<h3>Photo Editing</h3>
+
+<p>
+Passport Photo, HD Photo, Background Change और अन्य editing।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('Photo Editing')"
+href="#">
+
+Enquiry
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 8 -->
+
+<div
+class="card service"
+data-name="print scan pdf document">
+
+<div class="icon">🖨️</div>
+
+<h3>Print / Scan / PDF</h3>
+
+<p>
+Printing, Scanning, PDF और document preparation services।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('Print / Scan / PDF')"
+href="#">
+
+Enquiry
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 9 -->
+
+<div
+class="card service"
+data-name="bank account loan finance">
+
+<div class="icon">🏦</div>
+
+<h3>Banking / Finance</h3>
+
+<p>
+उपलब्ध account, loan एवं finance services के लिए enquiry करें।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('Banking / Finance')"
+href="#">
+
+Enquiry
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 10 -->
+
+<div
+class="card service"
+data-name="admission school college">
+
+<div class="icon">🏫</div>
+
+<h3>Admission Services</h3>
+
+<p>
+School, College एवं अन्य admission forms में सहायता।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('Admission Services')"
+href="#">
+
+Enquiry
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 11 -->
+
+<div
+class="card service"
+data-name="typing document application">
+
+<div class="icon">⌨️</div>
+
+<h3>Typing / Document Work</h3>
+
+<p>
+Application, certificate और अन्य document preparation।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('Typing / Document Work')"
+href="#">
+
+Enquiry
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 12 -->
+
+<div
+class="card service"
+data-name="government online services">
+
+<div class="icon">🌐</div>
+
+<h3>Other Online Services</h3>
+
+<p>
+अन्य उपलब्ध online सरकारी एवं digital services के लिए संपर्क करें।
+</p>
+
+<a
+class="smallbtn"
+onclick="apply('Other Online Services')"
+href="#">
+
+Enquiry
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="aboutgrid">
+
+
+<div>
+
+<div
+class="title"
+style="text-align:left;margin-bottom:15px">
+
+<h2>Rangeela Digital Studio</h2>
+
+</div>
+
+<p>
+Rangeela Digital Studio पर विभिन्न डिजिटल काम और ऑनलाइन सेवाओं के लिए सहायता उपलब्ध है।
+ग्राहक अपनी जरूरत के अनुसार सेवा चुनकर सीधे WhatsApp पर enquiry कर सकते हैं।
+</p>
+
+
+<div class="checks">
+
+<div class="check">
+✅ आसान प्रक्रिया
+</div>
+
+<div class="check">
+✅ WhatsApp Enquiry
+</div>
+
+<div class="check">
+✅ कई Digital Services
+</div>
+
+<div class="check">
+✅ Document सहायता
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🚀
+</div>
+
+<h3>
+Digital काम, आसान तरीके से
+</h3>
+
+<p>
+सेवा की जानकारी के लिए नीचे दिए WhatsApp button से संपर्क करें।
+</p>
+
+<a
+class="btn whatsapp"
+href="https://wa.me/918521739975"
+target="_blank">
+
+WhatsApp करें
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- DOCUMENTS -->
+
+<section id="documents">
+
+<div class="container">
+
+<div class="title">
+
+<h2>
+सामान्य Documents
+</h2>
+
+<p>
+सेवा के अनुसार अतिरिक्त documents की जरूरत हो सकती है।
+</p>
+
+</div>
+
+
+<div class="docs">
+
+
+<div class="doc">
+🪪
+<h3>Aadhaar Card</h3>
+<p>आधार की कॉपी</p>
+</div>
+
+
+<div class="doc">
+📋
+<h3>Marksheet</h3>
+<p>10th / 12th आदि</p>
+</div>
+
+
+<div class="doc">
+📷
+<h3>Passport Photo</h3>
+<p>हाल की फोटो</p>
+</div>
+
+
+<div class="doc">
+🏦
+<h3>Bank Passbook</h3>
+<p>जहाँ आवश्यक हो</p>
+</div>
+
+
+<div class="doc">
+📱
+<h3>Mobile Number</h3>
+<p>Active number</p>
+</div>
+
+
+<div class="doc">
+📄
+<h3>Certificates</h3>
+<p>सेवा के अनुसार</p>
+</div>
+
+
+<div class="doc">
+🏠
+<h3>Land Documents</h3>
+<p>जमीन संबंधी कार्यों के लिए</p>
+</div>
+
+
+<div class="doc">
+📁
+<h3>Other Documents</h3>
+<p>आवेदन के अनुसार</p>
+</div>
+
+
+</div>
+
+
+<div class="notice">
+
+⚠️ हर आवेदन के लिए जरूरी documents अलग हो सकते हैं।
+आवेदन से पहले सेवा की requirements जरूर पूछें।
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="container">
+
+<div class="title">
+
+<h2>
+Gallery
+</h2>
+
+<p>
+यहाँ अपनी दुकान, logo और work photos लगा सकते हैं।
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="photo">
+Rangeela<br>
+Digital Studio
+</div>
+
+<div class="photo">
+📸 Photo<br>
+Service
+</div>
+
+<div class="photo">
+💻 Online<br>
+Services
+</div>
+
+<div class="photo">
+🖨️ Print &<br>
+Scan
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+अपना काम WhatsApp पर भेजें
+</h2>
+
+<p>
+Service चुनें और enquiry button दबाएँ।
+</p>
+
+<a
+class="btn primary"
+href="https://wa.me/918521739975"
+target="_blank">
+
+💬 8521739975 पर WhatsApp
+
+</a>
+
+
+<a
+class="btn blue"
+href="tel:+918521739975">
+
+📞 Call करें
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="title">
+
+<h2>
+Contact Us
+</h2>
+
+<p>
+Rangeela Digital Studio से संपर्क करें।
+</p>
+
+</div>
+
+
+<div class="contact">
+
+
+<div class="contactbox">
+
+<h3>
+🏪 Rangeela Digital Studio
+</h3>
+
+
+<div class="item">
+
+📍 <b>Address:</b>
+
+<br>
+
+Chandpura Bazar,
+Rasulpur Habib
+
+</div>
+
+
+<div class="item">
+
+📱 <b>Mobile / WhatsApp:</b>
+
+<br>
+
+8521739975
+
+</div>
+
+
+<div class="item">
+
+🕐 <b>Timing:</b>
+
+<br>
+
+सुबह 8:00 बजे – शाम 8:00 बजे
+
+</div>
+
+
+<div class="item">
+
+💬 <b>Quick Contact:</b>
+
+<br>
+
+
+<a
+class="btn whatsapp"
+href="https://wa.me/918521739975"
+target="_blank">
+
+WhatsApp
+
+</a>
+
+
+<a
+class="btn blue"
+href="tel:+918521739975">
+
+Call
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- FORM -->
+
+<div class="contactbox form">
+
+<h3>
+📩 Online Enquiry
+</h3>
+
+
+<form onsubmit="sendForm(event)">
+
+
+<input
+id="name"
+required
+placeholder="आपका नाम"
+>
+
+
+<input
+id="phone"
+required
+placeholder="Mobile Number"
+>
+
+
+<textarea
+id="msg"
+required
+placeholder="आपको कौन-सी service चाहिए?"
+></textarea>
+
+
+<button
+class="btn whatsapp"
+type="submit">
+
+WhatsApp पर भेजें
+
+</button>
+
+
+</form>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+Rangeela Digital Studio
+</h3>
+
+<p>
+Online Forms • Scholarship • Resume • GST • Land Services • Photo • Print
+</p>
+
+<p>
+© 2026 Rangeela Digital Studio. All Rights Reserved.
+</p>
+
+</footer>
+
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="float"
+href="https://wa.me/918521739975"
+target="_blank">
+
+☘
+
+</a>
+
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    document
+    .getElementById("nav")
+    .classList
+    .toggle("open");
+
+}
+
+
+/* SERVICE SEARCH */
+
+function filterServices(){
+
+    const q =
+    document
+    .getElementById("search")
+    .value
+    .toLowerCase()
+    .trim();
+
+
+    document
+    .querySelectorAll(".service")
+    .forEach(function(card){
+
+        const data =
+        card.dataset.name.toLowerCase();
+
+        const text =
+        card.innerText.toLowerCase();
+
+
+        if(
+            data.includes(q) ||
+            text.includes(q)
+        ){
+
+            card.style.display="block";
+
+        }else{
+
+            card.style.display="none";
+
+        }
+
+    });
+
+}
+
+
+/* SERVICE WHATSAPP */
+
+function apply(service){
+
+    event.preventDefault();
+
+
+    const text =
+    "नमस्ते Rangeela Digital Studio,%0A%0A" +
+    "मुझे \"" +
+    service +
+    "\" के बारे में जानकारी/आवेदन करना है।";
+
+
+    window.open(
+        "https://wa.me/918521739975?text=" +
+        text,
+        "_blank"
+    );
+
+}
+
+
+/* CONTACT FORM */
+
+function sendForm(e){
+
+    e.preventDefault();
+
+
+    const name =
+    document
+    .getElementById("name")
+    .value
+    .trim();
+
+
+    const phone =
+    document
+    .getElementById("phone")
+    .value
+    .trim();
+
+
+    const msg =
+    document
+    .getElementById("msg")
+    .value
+    .trim();
+
+
+    const text =
+    "नमस्ते Rangeela Digital Studio,%0A%0A" +
+
+    "नाम: " +
+    encodeURIComponent(name) +
+
+    "%0AMobile: " +
+    encodeURIComponent(phone) +
+
+    "%0AService/Message: " +
+    encodeURIComponent(msg);
+
+
+    window.open(
+        "https://wa.me/918521739975?text=" +
+        text,
+        "_blank"
+    );
+
+}
+
+
+/* MOBILE MENU CLOSE */
+
+document
+.querySelectorAll("nav a")
+.forEach(function(a){
+
+    a.addEventListener(
+        "click",
+        function(){
+
+            document
+            .getElementById("nav")
+            .classList
+            .remove("open");
+
+        }
+    );
+
+});
+
+</script>
+
+</body>
+</html>
